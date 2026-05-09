@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Knots</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="container-nav">
+            <a href="index.html"><img src="imgs/knots_logo1.svg" width="100"></a>
+            <div class="search-container">
+                <input type="text" placeholder="Buscar vagas" class="search-input">
+                <a href="busca.html"><i class="fa-solid fa-magnifying-glass search-icon"></i></a>
+            </div>
+            <a href="postar-vaga.html">Anunciar</a>
+            <span>|</span>
+            <a href="#">Login</a>
+            <a href="#"><img src="imgs/icone-perfil.svg" width="50"></a>
+        </div>
+    </nav>
+
+    <main class="pagina-postar-vaga">
+        <div class="container-anuncio-vaga">
+            <h1>Assinar o Knots Premium</h1>
+            
+            <div class="resumo-compra">
+                <span>Plano Knots Premium</span>
+                <strong>R$ 50,00 / mês</strong>
+            </div>
+
+        <form action="#">
+            <div class="form-group">
+                <label class="label-postar-vaga">CNPJ da Empresa</label>
+                <input type="text" placeholder="00.000.000/0000-00" class="input-titulo" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group" style="flex: 2;">
+                    <label class="label-postar-vaga">Endereço de Cobrança (CEP)</label>
+                    <input type="text" placeholder="00000-000" class="input-titulo" required>
+                </div>
+                <div class="form-group" style="flex: 1;">
+                    <label class="label-postar-vaga">Número</label>
+                    <input type="text" placeholder="Ex: 123" class="input-titulo" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="label-postar-vaga">Opção de Pagamento</label>
+                <div class="payment-options">
+                    <label class="payment-card">
+                        <input type="radio" name="pagamento" value="pix" checked onclick="toggleCartao(false)">
+                        <i class="fa-brands fa-pix"></i> Pix
+                    </label>
+                    <label class="payment-card">
+                        <input type="radio" name="pagamento" value="cartao" onclick="toggleCartao(true)">
+                        <i class="fa-solid fa-credit-card"></i> Cartão de Crédito
+                    </label>
+                </div>
+            </div>
+
+            <div id="dados-cartao" class="form-cartao" style="display: none;">
+                <div class="form-group">
+                    <label class="label-postar-vaga">Número do Cartão</label>
+                    <input type="text" placeholder="0000 0000 0000 0000" class="input-titulo">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="label-postar-vaga">Validade</label>
+                        <input type="text" placeholder="MM/AA" class="input-titulo">
+                    </div>
+                    <div class="form-group">
+                        <label class="label-postar-vaga">CVV</label>
+                        <input type="text" placeholder="123" class="input-titulo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkbox-group" style="background-color: transparent; border: none; padding: 10px 0;">
+                <label class="checkbox-item">
+                    <input type="checkbox" required> 
+                    Concordo com os termos e condições de uso
+                </label>
+            </div>
+
+            <button type="submit" class="btn-submit">Confirmar Compra</button>
+        </form>
+
+        <script>
+            function toggleCartao(show) {
+                const divCartao = document.getElementById('dados-cartao');
+                divCartao.style.display = show ? 'block' : 'none';
+            }
+        </script>
+    </main>
+
+    <footer>
+        <span>Desenvolvido por grupo Knots, 2026</span>
+    </footer>
+</body>
+</html>

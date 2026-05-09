@@ -1,0 +1,738 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #ebf9ff;
+}
+body span, p{
+    color: #070810;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: #52a5de;
+    padding: 30px;
+    border-radius: 100px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.container-nav{
+    width: 150vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container-nav a{
+    text-decoration: none;
+    color: #070810;
+    font-size: 1.5rem;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #ebf9ff;
+  border-radius: 8px;
+  padding: 5px 15px;
+  width: 100%;
+  max-width: 500px; /* Limita o tamanho horizontal */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.search-input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  color: #87ceeb;
+}
+.search-input::placeholder {
+  color: #add8e6;
+}
+.search-icon {
+  color: #add8e6;
+  font-size: 20px;
+  cursor: pointer;
+  transform: scaleX(-1); 
+}
+footer{
+    text-align: center;
+    background-color: #52a5de;
+    padding: 30px;
+    margin-top: 50px;
+
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
+/* HOME */
+.container-home{
+    margin: 40px auto;
+    max-width: 1200px; /* Limita a largura para não espalhar demais em telas gigantes */
+    display: flex;      /* Ativa o modo lado a lado */
+    align-items: center; /* Alinha o texto e a imagem verticalmente pelo centro */
+    justify-content: space-between; /* Empurra o texto para a esquerda e imagem para a direita */
+    padding: 0 50px;
+}
+.container-home h1{
+    font-size: 2rem;
+    margin: 10px;
+    text-align: left;
+}
+.container-home h2{
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin: 10px;
+}
+.container-home a{
+    display: inline-block;
+    justify-content: right;
+    align-items: center;
+    background-color: #52a5de;
+    border-radius: 20px;
+    padding: 20px;
+    color: #ebf9ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.container-home a:hover{
+    background-color: #18284a;
+}
+.createaccount-home{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+.container-planos-home{
+    margin: 40px auto;
+    max-width: 1200px; 
+    display: block;      
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 0 50px;
+    text-align: center;
+}
+.createaccount-home2{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2rem;
+}
+.textohome{
+    width: 60%;
+}
+.imghome{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.imghome img{
+    max-width: 70%;
+    border-radius: 20px;
+}
+.imghome2{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.imghome2 img{
+    max-width: 70%;
+    border-radius: 20px;
+}
+
+.grid-cards {
+    display: grid; /* Ajusta o negocio sózinho em colunas */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px; /* gap entre as colunas */
+    width: 30%;
+    justify-content: center;
+    margin: auto;
+}
+.card {
+    background: #acd6f6;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.card:hover {
+    transform: translateY(-10px); /*Faz uma animaçãozinha pra cima*/
+}
+.card a {
+    text-decoration: none;
+    color: #18284a;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Faz o link ocupar toda a altura do card */
+    box-sizing: border-box;
+}
+.card h3 {
+    display: block;
+    padding: 15px;
+    font-weight: bold;
+    color: #070810;
+}
+.preco{
+    margin-top: auto;
+}
+
+/* Filtros Laterais */
+.container-filtro {
+    margin-left: 100px;
+    margin-top: 50px;
+    border: 2px solid #070810;
+    width: 300px; /* Largura fixa ou max-width em % */
+    border-radius: 20px;
+    padding: 15px;
+    background-color: #ebf9ff; /* Fundo branco para destacar os filtros */
+}
+
+.filtrosbusca {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.container-filtro li {
+    background-color: #52a5de;
+    padding: 8px;
+    margin: 5px 0;
+    list-style: none;
+    text-align: center;
+    border-radius: 15px;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.filter-input {
+    margin: 10px 0;
+    background-color: #ebf9ff;
+    border-radius: 8px;
+    padding: 10px;
+    width: 90%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 2px solid #52a6de93;
+    outline: none;
+    font-size: 14px;
+    color: #070810;
+}
+
+.pagina-busca {
+    display: flex;
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+    justify-content: center; /* Centraliza o conjunto na tela */
+    gap: 40px;               /* Espaço entre o filtro e as vagas */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;         /* Centraliza o container principal */
+}
+
+/* Ajuste no container de filtro (removi o margin-left fixo) */
+.container-filtro {
+    /* Mantém as configurações visuais */
+    border: 2px solid #070810;
+    width: 300px; 
+    flex-shrink: 0;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: #ebf9ff;
+
+    /* A mágica acontece aqui */
+    position: sticky; 
+    top: 120px; /* Ajuste esse valor conforme a altura do seu NAV + margem desejada */
+    align-self: flex-start; /* Essencial para o sticky funcionar dentro do Flexbox */
+    
+    /* Remova margin-top: 50px se quiser que ele suba mais, 
+       ou mantenha se quiser um respiro inicial */
+    margin-top: 55px; 
+}
+
+.titulosugestfilter{
+    padding: 10px;
+    padding-bottom: 0;
+    font-weight: bold;
+}
+/* Ajuste na área das vagas */
+.buscavagasabertas {
+    margin-top: 50px; /* Mesma margem do filtro para ficarem alinhados */
+    flex-grow: 1;    /* Faz a área de vagas ocupar o resto do espaço */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilização básica do card de vaga para não ficar "solto" */
+.buscaanunciovaga {
+    background-color: #ebf9ff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 1px solid #52a5de;
+}
+
+.titulovagabusca {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.buscabotcand {
+    display: flex; /* Permite dar largura e altura se precisar */
+    float: right;
+    background-color: #52a5de; /* Azul do seu tema */
+    color: white !important;   /* Força a cor do texto para branco */
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;     /* Remove o sublinhado */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buscabotcand:hover{
+    background-color: #18284a;
+}
+
+/* Garante que a cor NÃO mude depois de clicado (visitado) */
+.buscabotcand:link, 
+.buscabotcand:visited {
+    color: white;
+    text-decoration: none;
+}
+
+/*Ver vaga*/
+.vaga-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.card-vaga {
+    background-color: #fff;
+    width: 100%;
+    max-width: 800px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.vaga-header h1 {
+    color: #52a5de;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.vaga-header .empresa {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.vaga-detalhes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 30px;
+}
+
+.detalhe-item strong {
+    color: #52a5de;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.vaga-texto h3 {
+    margin: 25px 0 15px 0;
+    color: #333;
+}
+
+.vaga-texto ul {
+    margin-left: 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.vaga-texto p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.btn-candidatar {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 40px auto 0 auto;
+    padding: 15px;
+    background-color: #52a5de;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-candidatar:hover {
+    background-color: #18284a;
+}
+
+/*Anunciar Vaga*/
+.pagina-postar-vaga {
+    flex: 1; /* Faz o main ocupar o espaço restante, empurrando o footer para baixo */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente (se houver espaço) */
+    padding: 50px 20px; /* Espaçamento ao redor do formulário */
+}
+
+.container-anuncio-vaga {
+    background: white;
+    width: 100%;
+    max-width: 650px; /* Largura máxima do formulário */
+    padding: 40px;
+    border-radius: 15px; /* Bordas mais arredondadas */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Sombra mais suave e elegante */
+}
+
+.container-anuncio-vaga h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 2rem;
+}
+
+/* Estrutura dos Campos */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px; /* Espaço entre campos na mesma linha */
+}
+
+.form-row .form-group {
+    flex: 1; /* Cada campo ocupa metade da linha */
+}
+
+/* Labels */
+.label-postar-vaga{
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Inputs, Selects e Textareas */
+.input-titulo, 
+select, 
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #87ceeb;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.2s;
+}
+
+/* Cor do placeholder nos campos do formulário (AJUSTE SOLICITADO) */
+input::placeholder,
+textarea::placeholder {
+    color: #a0a0a0; /* Um cinza médio, visível mas não muito forte */
+}
+
+/* Efeito de foco nos campos */
+input:focus, 
+select:focus, 
+textarea:focus {
+    outline: none;
+    border-color: #52a5de; /* Borda da cor do tema ao focar */
+}
+
+/* Estilização específica do select */
+select {
+    appearance: none; /* Remove o estilo padrão do navegador */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%2352a5de%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%2E');
+    background-repeat: no-repeat;
+    background-position: right 15px top 50%;
+    background-size: 12px auto;
+    padding-right: 40px; /* Espaço para o ícone */
+}
+
+textarea {
+    resize: vertical; /* Permite redimensionar apenas verticalmente */
+    font-family: inherit; /* Garante que use a mesma fonte */
+}
+
+/* Botão Enviar */
+.btn-submit {
+    width: 100%;
+    background-color: #52a5de;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s, transform 0.1s;
+}
+
+.btn-submit:hover {
+    background-color: #18284a;
+}
+
+.btn-submit:active {
+    transform: translateY(1px); /* Efeito de clique */
+}
+
+/* Ajuste de centralização total da página */
+.pagina-postar-vaga {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinhado ao topo com padding */
+    min-height: 80vh; 
+    padding: 50px 20px;
+}
+
+.container-anuncio-vaga {
+    background: white;
+    width: 100%;
+    max-width: 650px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    /* Garante que o conteúdo interno também siga o fluxo central */
+    margin: 0 auto;
+}
+
+/* Estilo dos botões de importação */
+.import-options {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    justify-content: center;
+}
+
+.btn-import {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    font-size: 0.9rem;
+}
+
+.btn-linkedin {
+    background-color: #0077b5;
+    color: white;
+}
+
+.btn-infojobs {
+    background-color: #ff4b12; /* Cor característica do Infojobs */
+    color: white;
+}
+
+.btn-import:hover {
+    opacity: 0.9;
+}
+
+/* Divisor visual */
+.separator {
+    text-align: center;
+    margin: 20px 0;
+    color: #888;
+    position: relative;
+}
+
+.separator::before, .separator::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 25%;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.separator::before { left: 0; }
+.separator::after { right: 0; }
+
+/* Garante que todos os campos de entrada tenham o mesmo dimensionamento */
+.input-titulo, 
+select, 
+textarea {
+    width: 100%;
+    /* Importante: box-sizing garante que padding não aumente a largura total */
+    box-sizing: border-box; 
+    padding: 12px 15px;
+    border: 1px solid #87ceeb;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: #fff;
+    color: #333;
+    display: block; /* Remove folgas de elementos inline-block */
+}
+
+/* Ajuste na linha que contém Local e Escala */
+.form-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.form-row .form-group {
+    flex: 1; /* Faz com que ambos ocupem 50% da linha exatamente */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo dos botões de importação para ficarem alinhados ao formulário */
+.import-options {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.btn-import {
+    flex: 1; /* Faz os dois botões terem o mesmo tamanho e ocuparem a largura total */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 3. ESTILO DOS CHECKBOXES */
+.checkbox-group {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f0faff; /* Um azul bem clarinho para destacar */
+    border-radius: 8px;
+    border: 1px dashed #52a5de;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.checkbox-item:last-child {
+    margin-bottom: 0;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* PÁGINA DE COMPRA */
+/* Estilo do Resumo de Preço */
+.resumo-compra {
+    background-color: #52a5de;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* Opções de Pagamento em Cards */
+.payment-options {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.payment-card {
+    flex: 1;
+    border: 2px solid #87ceeb;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: white;
+}
+
+.payment-card i {
+    font-size: 1.2rem;
+    color: #52a5de;
+}
+
+/* Efeito quando o radio button é selecionado */
+.payment-card:has(input:checked) {
+    border-color: #18284a;
+    background-color: #ebf9ff;
+    font-weight: bold;
+}
+
+.payment-card input {
+    display: none; /* Esconde o círculo do radio para o card ser o botão */
+}
+
+/* Reutilizando as classes que já definimos antes */
+.input-titulo {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin-bottom: 5px;
+}
+
+/* Container dos dados do cartão */
+.form-cartao {
+    background-color: #f8fbfc;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #87ceeb;
+    margin-top: 15px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ajuste específico para o form-row dentro do checkout */
+.form-cartao .form-row {
+    margin-bottom: 0;
+}
