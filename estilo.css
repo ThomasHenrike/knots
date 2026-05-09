@@ -64,9 +64,7 @@ footer{
     background-color: #52a5de;
     padding: 30px;
     margin-top: 50px;
-
-    border-top-left-radius: 100px;
-    border-top-right-radius: 100px;
+    flex: 1
 }
 
 /* HOME */
@@ -735,4 +733,90 @@ textarea {
 /* Ajuste específico para o form-row dentro do checkout */
 .form-cartao .form-row {
     margin-bottom: 0;
+}
+
+/*NAVEGAÇÃO LATERAL DO PERFIL*/
+#perfil-candidato {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 5%;  
+
+    width: 100%;
+}
+.container-nav-lateral {
+    width: 300px;
+    flex-shrink: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 15px;
+    background-color: #52a5de;
+    height: 100vh;
+
+    position: sticky;
+    top: 120px;
+    align-self: flex-start;
+    
+    /* Garante que não haja margens empurrando o elemento */
+    margin: 0; 
+}
+.container-nav-lateral li{
+    list-style: none;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10%;
+    padding-left: 0;
+}
+.container-nav-lateral li a{
+    text-decoration: none;
+    color: #ebf9ff;
+}
+.container-nav-lateral li a i{
+    text-decoration: none;
+    color: red;
+}
+.container-nav-lateral li:hover{
+    background-color: #4587b3;
+}
+.container-nav-lateral h2{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #ebf9ff;
+}
+
+/*CONTEUDO PERFIL CANDIDATO*/
+.container-conteudo-perfil{
+    margin: 30px;
+}
+.container-conteudo-perfil h2{
+    font-size: 3rem;
+    font-weight: bold;
+    display: inline-block;
+    align-items: center;
+}
+.container-conteudo-perfil h1{
+    margin-bottom: 20px;
+}
+.container-conteudo-perfil h3{
+    margin: 10px;
+    margin-top: 20px;
+}
+.foto-perfil{
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* Garante que a imagem não fique esticada */
+  border-radius: 50%;
+}
+.header-perfil {
+  display: flex;    
+  align-items: center;   
+  gap: 20px;          
+}
+.info-usuario {
+  display: flex;
+  flex-direction: column; /* Faz o texto ficar um embaixo do outro */
+  justify-content: center;
+  gap: 5px;
+}
+.info-usuario h2, .info-usuario p {
+  margin: 0;
 }
