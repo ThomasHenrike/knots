@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knots - Perfil</title>
+    <link rel="stylesheet" href="../estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="../imgs/logoicon1.ico">
+</head>
+<body>
+    <nav>
+        <div class="container-nav">
+            <a href="../index.html"><img src="../imgs/knots_logo1.svg" width="100"></a>
+            <div class="search-container">
+                <input type="text" placeholder="Buscar vagas" class="search-input">
+                <a href="../busca.html"><i class="fa-solid fa-magnifying-glass search-icon"></i></a>
+            </div>
+            <a href="../postar-vaga.html">Anunciar</a>
+            <span>|</span>
+            <a href="#">Login</a>
+            <a href="../perfil-candidato.html"><img src="../imgs/icone-perfil.svg" width="50"></a>
+        </div>
+    </nav>
+
+    <main id="perfil-candidato">
+        <div class="container-nav-lateral">
+            <h2>Navegação</h2>
+            <ul>
+                <li><a href="perfil-empresa.html"><i class="fa-solid fa-building"></i> Perfil da Empresa</a></li>
+                <li><a href="minhas-vagas.html"><i class="fa-solid fa-list-check"></i> Minhas Vagas</a></li>
+                <li><a href="#"><i class="fa-solid fa-users-gear"></i> Processos Seletivos</a></li>
+                <li><a href="#"><i class="fa-solid fa-bell"></i> Notificações <i class="fa-solid fa-circle-exclamation" style="color: var(--branco); font-size: 0.7rem; vertical-align: middle;"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-chart-line"></i> Relatórios</a></li>
+                <li><a href="#"><i class="fa-solid fa-gears"></i> Preferências</a></li>
+                <li><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></li>
+            </ul>
+        </div>
+        <div class="container-conteudo-perfil">
+            <div class="header-processos">
+                <h1>Processos Seletivos</h1>
+                <div class="filtro-vaga">
+                    <label for="seleciona-vaga">Visualizando a vaga:</label>
+                    <select id="seleciona-vaga">
+                        <option value="frontend">Desenvolvedor Front-end Júnior</option>
+                        <option value="redes">Estágio em Redes</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="kanban-board">
+                
+                <div class="kanban-coluna">
+                    <div class="kanban-header">
+                        <h3>Novos <span class="contador">2</span></h3>
+                    </div>
+                    <div class="kanban-cards">
+                        <div class="candidato-card" draggable="true">
+                            <div class="candidato-info">
+                                <img src="../imgs/bope.png" alt="Foto Candidato" class="avatar-pequeno">
+                                <div>
+                                    <h4>Weslley Santos</h4>
+                                    <p>FATEC | Itapira</p>
+                                </div>
+                            </div>
+                            <div class="candidato-acoes">
+                                <a href="../perfil-candidato.html" class="btn-ver-perfil">Ver Currículo</a>
+                            </div>
+                        </div>
+
+                        <div class="candidato-card" draggable="true">
+                            <div class="candidato-info">
+                                <img src="../imgs/carlos.jpg" alt="Foto Candidato" class="avatar-pequeno">
+                                <div>
+                                    <h4>Carlos Silva</h4>
+                                    <p>USP | São Paulo</p>
+                                </div>
+                            </div>
+                            <div class="candidato-acoes">
+                                <a href="../perfil-candidato.html" class="btn-ver-perfil">Ver Currículo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kanban-coluna">
+                    <div class="kanban-header">
+                        <h3>Em Análise <span class="contador">1</span></h3>
+                    </div>
+                    <div class="kanban-cards">
+                        <div class="candidato-card" draggable="true">
+                            <div class="candidato-info">
+                                <img src="../imgs/ana.webp" alt="Foto Candidato" class="avatar-pequeno">
+                                <div class="avatar-placeholder"><i class="fa-solid fa-user"></i></div>
+                                <div>
+                                    <h4>Ana Clara</h4>
+                                    <p>PUC | Mogi Mirim</p>
+                                </div>
+                            </div>
+                            <div class="candidato-acoes">
+                                <a href="#" class="btn-ver-perfil">Ver Currículo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kanban-coluna">
+                    <div class="kanban-header">
+                        <h3>Entrevista <span class="contador">0</span></h3>
+                    </div>
+                    <div class="kanban-cards">
+                        <div class="candidato-card" draggable="true">
+                            <div class="candidato-info">
+                                <img src="../imgs/cleiton.webp" alt="Foto Candidato" class="avatar-pequeno">
+                                <div class="avatar-placeholder"><i class="fa-solid fa-user"></i></div>
+                                <div>
+                                    <h4>Cleiton Rodrigues</h4>
+                                    <p>ITA | São José dos Campos</p>
+                                </div>
+                            </div>
+                            <div class="candidato-acoes">
+                                <a href="#" class="btn-ver-perfil">Ver Currículo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kanban-coluna coluna-sucesso">
+                    <div class="kanban-header">
+                        <h3>Aprovados <span class="contador">0</span></h3>
+                    </div>
+                    <div class="kanban-cards">
+                        <!--ESPAÇO PARA ADIÇÃO DE CARD-->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <span>Desenvolvido por grupo Knots, 2026</span>
+    </footer>
+    <script src="drag-drop.js"></script>
+</body>
+</html>

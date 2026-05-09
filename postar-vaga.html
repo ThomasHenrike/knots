@@ -9,19 +9,21 @@
     <link rel="icon" type="image/x-icon" href="imgs/logoicon1.ico">
 </head>
 <body>
-    <nav>
-        <div class="container-nav">
-            <a href="index.html"><img src="imgs/knots_logo1.svg" width="100"></a>
-            <div class="search-container">
-                <input type="text" placeholder="Buscar vagas" class="search-input">
-                <a href="busca.html"><i class="fa-solid fa-magnifying-glass search-icon"></i></a>
+    <header>
+        <nav>
+            <div class="container-nav">
+                <a href="index.html"><img src="imgs/knots_logo1.svg" width="100"></a>
+                <div class="search-container">
+                    <input type="text" placeholder="Buscar vagas" class="search-input">
+                    <a href="busca.html"><i class="fa-solid fa-magnifying-glass search-icon"></i></a>
+                </div>
+                <a href="postar-vaga.html">Anunciar</a>
+                <span>|</span>
+                <a href="#">Login</a>
+                <a href="perfil-candidato.html"><img src="imgs/icone-perfil.svg" width="50"></a>
             </div>
-            <a href="postar-vaga.html">Anunciar</a>
-            <span>|</span>
-            <a href="#">Login</a>
-            <a href="perfil-candidato.html"><img src="imgs/icone-perfil.svg" width="50"></a>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <main class="pagina-postar-vaga">
         <div class="container-anuncio-titulo">
@@ -40,7 +42,7 @@
         
         <form action="#">
             <div class="form-group">
-                <label label-postar-vaga for="titulo">Título da Vaga</label>
+                <label class="label-postar-vaga" for="titulo">Título da Vaga</label>
                 <input type="text" id="titulo" placeholder="Ex: Desenvolvedor Front-end" class="input-titulo" required>
             </div>
 

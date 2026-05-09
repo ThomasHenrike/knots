@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knots - Perfil</title>
+    <link rel="stylesheet" href="../estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="../imgs/logoicon1.ico">
+</head>
+<body>
+    <nav>
+        <div class="container-nav">
+            <a href="../index.html"><img src="../imgs/knots_logo1.svg" width="100"></a>
+            <div class="search-container">
+                <input type="text" placeholder="Buscar vagas" class="search-input">
+                <a href="../busca.html"><i class="fa-solid fa-magnifying-glass search-icon"></i></a>
+            </div>
+            <a href="../postar-vaga.html">Anunciar</a>
+            <span>|</span>
+            <a href="#">Login</a>
+            <a href="../perfil-candidato.html"><img src="../imgs/icone-perfil.svg" width="50"></a>
+        </div>
+    </nav>
+
+    <main id="perfil-candidato">
+        <div class="container-nav-lateral">
+            <h2>Navegação</h2>
+            <ul>
+                <li><a href="perfil-empresa.html"><i class="fa-solid fa-building"></i> Perfil da Empresa</a></li>
+                <li><a href="#"><i class="fa-solid fa-list-check"></i> Minhas Vagas</a></li>
+                <li><a href="processos-seletivos.html"><i class="fa-solid fa-users-gear"></i> Processos Seletivos</a></li>
+                <li><a href="#"><i class="fa-solid fa-bell"></i> Notificações <i class="fa-solid fa-circle-exclamation" style="color: var(--branco); font-size: 0.7rem; vertical-align: middle;"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-chart-line"></i> Relatórios</a></li>
+                <li><a href="#"><i class="fa-solid fa-gears"></i> Preferências</a></li>
+                <li><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></li>
+            </ul>
+        </div>
+        <div class="container-conteudo-perfil">
+            <div class="header-minhas-vagas">
+                <h1>Minhas Vagas</h1>
+                <a href="../postar-vaga.html" class="btn-submit btn-nova-vaga">+ Criar Nova Vaga</a>
+            </div>
+
+            <div class="lista-minhas-vagas">
+                <div class="card-minha-vaga">
+                    <div class="info-vaga">
+                        <h3>Desenvolvedor Front-end Júnior <span class="badge-status ativa">Ativa</span></h3>
+                        <p>Híbrido - Itapira SP | CLT</p>
+                        <p class="candidatos-count"><i class="fa-solid fa-users"></i> 45 Candidatos</p>
+                    </div>
+                    <div class="acoes-vaga">
+                        <button class="btn-acao btn-ver">Ver Candidatos</button>
+                        <button class="btn-acao btn-editar" title="Editar"><i class="fa-solid fa-pen"></i></button>
+                        <button class="btn-acao btn-excluir" title="Encerrar Vaga"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                </div>
+
+                <div class="card-minha-vaga">
+                    <div class="info-vaga">
+                        <h3>Estágio em Redes <span class="badge-status ativa">Ativa</span></h3>
+                        <p>Presencial - Mogi Mirim SP | Estágio</p>
+                        <p class="candidatos-count"><i class="fa-solid fa-users"></i> 12 Candidatos</p>
+                    </div>
+                    <div class="acoes-vaga">
+                        <button class="btn-acao btn-ver">Ver Candidatos</button>
+                        <button class="btn-acao btn-editar" title="Editar"><i class="fa-solid fa-pen"></i></button>
+                        <button class="btn-acao btn-excluir" title="Encerrar Vaga"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                </div>
+
+                <div class="card-minha-vaga vaga-inativa">
+                    <div class="info-vaga">
+                        <h3>Analista de Suporte Técnico <span class="badge-status encerrada">Encerrada</span></h3>
+                        <p>Presencial - Itapira SP | CLT</p>
+                        <p class="candidatos-count"><i class="fa-solid fa-users"></i> 87 Candidatos (Processo Finalizado)</p>
+                    </div>
+                    <div class="acoes-vaga">
+                        <button class="btn-acao btn-ver">Ver Histórico</button>
+                        <button class="btn-acao btn-excluir" title="Excluir Definitivamente"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <span>Desenvolvido por grupo Knots, 2026</span>
+    </footer>
+</body>
+</html>
