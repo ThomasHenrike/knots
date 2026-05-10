@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knots - Cadastro de Empresa</title>
+    
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="imgs/logoicon1.ico">
+</head>
+<body class="body-cadastro">
+
+    <div id="toast-container"></div>
+
+    <div class="container-cadastro">
+        
+        <div class="cadastro-branding">
+            <a href="index.html">
+                <img src="imgs/knots_logo1.svg" width="150" alt="Logo Knots" style="filter: brightness(0) invert(1);">
+            </a>
+            <h2>Encontre os melhores talentos para o seu negócio.</h2>
+            <p>Junte-se a centenas de empresas que já transformaram os seus processos seletivos com o Knots. Cadastro rápido e gratuito.</p>
+        </div>
+
+        <div class="cadastro-form-container">
+            
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="barra-progresso" style="width: 50%;"></div>
+            </div>
+
+            <form id="form-cadastro-empresa">
+                
+                <div class="form-step active" id="etapa1">
+                    <h3>Dados da Empresa</h3>
+                    <p style="color: var(--texto-secundario); margin-bottom: 20px;">Comece identificando a sua empresa.</p>
+                    
+                    <div class="form-group">
+                        <label class="label-postar-vaga">CNPJ</label>
+                        <input type="text" name="CNPJ" id="cnpj" placeholder="00.000.000/0000-00" class="input-titulo" maxlength="18" required>
+                        <span id="aviso-cnpj" style="font-size: 0.8rem; color: #f59e0b; display: none;">
+                            <i class="fa-solid fa-spinner fa-spin"></i> Consultando Receita Federal...
+                        </span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="label-postar-vaga">Razão Social</label>
+                        <input type="text" name="Razao_Social" id="razao_social" placeholder="Preenchido automaticamente pelo CNPJ" class="input-titulo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="label-postar-vaga">Setor de Atuação</label>
+                        <select name="Setor" class="input-titulo" required>
+                            <option value="">Selecione o setor...</option>
+                            <option value="Tecnologia da Informação">Tecnologia da Informação</option>
+                            <option value="Recursos Humanos">Recursos Humanos</option>
+                            <option value="Comércio e Varejo">Comércio e Varejo</option>
+                            <option value="Indústria e Manufatura">Indústria e Manufatura</option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="btn-submit btn-proximo" id="btn-proximo">
+                        Próximo Passo <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="form-step" id="etapa2">
+                    <h3>Crie o seu Acesso</h3>
+                    <p style="color: var(--texto-secundario); margin-bottom: 20px;">Como você acessará o painel da empresa.</p>
+                    
+                    <div class="form-group">
+                        <label class="label-postar-vaga">E-mail Corporativo</label>
+                        <input type="email" name="Email" placeholder="rh@suaempresa.com.br" class="input-titulo" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="label-postar-vaga">Senha</label>
+                        <div class="senha-container">
+                            <input type="password" name="Senha" id="senha" placeholder="Mínimo 6 caracteres" class="input-titulo" required>
+                            <i class="fa-solid fa-eye toggle-senha"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="label-postar-vaga">Confirmar Senha</label>
+                        <div class="senha-container">
+                            <input type="password" id="confirmar_senha" placeholder="Repita a senha" class="input-titulo" required>
+                            <i class="fa-solid fa-eye toggle-senha"></i>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-lgpd">
+                        <input type="checkbox" id="termos_lgpd" required>
+                        <label for="termos_lgpd">
+                            Li e aceito os <a href="#">Termos de Uso</a> e concordo com o tratamento dos dados (LGPD).
+                        </label>
+                    </div>
+                    
+                    <div class="botoes-step">
+                        <button type="button" class="btn-acao btn-editar btn-voltar">
+                            <i class="fa-solid fa-arrow-left"></i> Voltar
+                        </button>
+                        <button type="submit" class="btn-submit btn-finalizar" id="btn-finalizar">
+                            Criar Conta
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+
+            <div class="ou-divisor">
+                <span>ou</span>
+            </div>
+
+            <div class="social-login">
+                <button type="button" class="btn-social btn-google">
+                    <i class="fa-brands fa-google"></i> Continuar com Google
+                </button>
+                <button type="button" class="btn-social btn-linkedin">
+                    <i class="fa-brands fa-linkedin-in"></i> Continuar com LinkedIn
+                </button>
+            </div>
+
+            <p class="login-link">Já tem uma conta? <a href="#">Faça Login aqui</a></p>
+        </div>
+    </div>
+
+    <script src="cadastro.js"></script>
+</body>
+</html>

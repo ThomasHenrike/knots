@@ -1877,130 +1877,441 @@ input:checked + .slider:before {
 }
 
 /* Estilos específicos para a página de Contas Vinculadas */
-        .container-conteudo-contas {
-            flex-grow: 1;
-            padding: 40px;
-            max-width: 900px;
-        }
+.container-conteudo-contas {
+    flex-grow: 1;
+    padding: 40px;
+    max-width: 900px;
+}
 
-        .header-contas {
-            margin-bottom: 30px;
-        }
+.header-contas {
+    margin-bottom: 30px;
+}
 
-        .header-contas h1 {
-            color: #333;
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-        }
+.header-contas h1 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
 
-        .header-contas p {
-            color: #666;
-            font-size: 1rem;
-        }
+.header-contas p {
+    color: #666;
+    font-size: 1rem;
+}
 
-        .grid-contas {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
+.grid-contas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
 
-        .conta-card {
-            background: white;
-            padding: 20px;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.2s;
-        }
+.conta-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
 
-        .conta-card:hover {
-            transform: translateY(-2px);
-        }
+.conta-card:hover {
+    transform: translateY(-2px);
+}
 
-        .conta-info {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
+.conta-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 
-        .conta-icone {
-            font-size: 2.5rem;
-            width: 50px;
-            text-align: center;
-        }
+.conta-icone {
+    font-size: 2.5rem;
+    width: 50px;
+    text-align: center;
+}
 
-        /* Cores das marcas */
-        .fa-google { color: #db4437; }
-        .fa-microsoft { color: #00a4ef; }
-        .fa-github { color: #333; }
+/* Cores das marcas */
+.fa-google { color: #db4437; }
+.fa-microsoft { color: #00a4ef; }
+.fa-github { color: #333; }
 
-        .conta-detalhes h3 {
-            margin: 0;
-            font-size: 1.2rem;
-            color: #333;
-        }
+.conta-detalhes h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
 
-        .conta-detalhes p {
-            margin: 2px 0 0;
-            font-size: 0.9rem;
-            color: #888;
-        }
+.conta-detalhes p {
+    margin: 2px 0 0;
+    font-size: 0.9rem;
+    color: #888;
+}
 
-        .btn-vincular {
-            padding: 10px 25px;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.3s;
-            border: 2px solid var(--azul-principal);
-            background: transparent;
-            color: var(--azul-principal);
-        }
+.btn-vincular {
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2px solid var(--azul-principal);
+    background: transparent;
+    color: var(--azul-principal);
+}
 
-        .btn-vincular:hover {
-            background: var(--azul-principal);
-            color: white;
-        }
+.btn-vincular:hover {
+    background: var(--azul-principal);
+    color: white;
+}
 
-        .btn-desvincular {
-            padding: 10px 25px;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.3s;
-            border: 2px solid #e2e8f0;
-            background: #f8fafc;
-            color: #64748b;
-        }
+.btn-desvincular {
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2px solid #e2e8f0;
+    background: #f8fafc;
+    color: #64748b;
+}
 
-        .btn-desvincular:hover {
-            background: #fee2e2;
-            color: #ef4444;
-            border-color: #fecaca;
-        }
+.btn-desvincular:hover {
+    background: #fee2e2;
+    color: #ef4444;
+    border-color: #fecaca;
+}
 
-        .status-badge {
-            font-size: 0.75rem;
-            padding: 4px 8px;
-            border-radius: 20px;
-            margin-left: 10px;
-            vertical-align: middle;
-        }
+.status-badge {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
 
-        .status-conectado {
-            background: #dcfce7;
-            color: #166534;
-        }
+.status-conectado {
+    background: #dcfce7;
+    color: #166534;
+}
 
-        .status-desconectado {
-            background: #f1f5f9;
-            color: #64748b;
-        }
+.status-desconectado {
+    background: #f1f5f9;
+    color: #64748b;
+}
 
-        @media (min-width: 768px) {
-            .grid-contas {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
+@media (min-width: 768px) {
+    .grid-contas {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* --- TELA DE CADASTRO (SPLIT SCREEN) --- */
+
+.body-cadastro {
+    background-color: var(--azul-fundo-site);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container-cadastro {
+    display: flex;
+    background-color: var(--branco);
+    width: 100%;
+    max-width: 1000px; /* Largura máxima do cartão */
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08); /* Sombra elegante */
+    overflow: hidden; /* Faz os cantos arredondados cortarem o fundo azul */
+}
+
+/* Lado Azul da Marca */
+.cadastro-branding {
+    background-color: var(--azul-principal);
+    color: var(--branco);
+    width: 45%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cadastro-branding h2 {
+    font-size: 2.2rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.cadastro-branding p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+/* Lado Branco do Formulário */
+.cadastro-form-container {
+    width: 55%;
+    padding: 50px;
+    position: relative;
+}
+
+/* Barra de Progresso */
+.progress-bar-container {
+    width: 100%;
+    height: 8px;
+    background-color: #f1f5f9;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 50%; /* Começa na metade porque são 2 passos */
+    background-color: var(--azul-principal);
+    transition: width 0.4s ease; /* Animação suave ao crescer */
+}
+
+/* A mágica do Formulário Dinâmico */
+.form-step {
+    display: none; /* Esconde todos os passos por padrão */
+    animation: fadeInStep 0.4s ease forwards;
+}
+
+.form-step.active {
+    display: block; /* Mostra apenas o passo ativo */
+}
+
+.form-step h3 {
+    color: var(--azul-principal);
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+/* Botões do Formulário */
+.botoes-step {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn-proximo, .btn-finalizar {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.btn-voltar {
+    width: 30%;
+    text-align: center;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.95rem;
+    color: var(--texto-secundario);
+}
+
+.login-link a {
+    color: var(--azul-principal);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Animação para a troca de telas */
+@keyframes fadeInStep {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsividade: Vira um embaixo do outro no celular */
+@media (max-width: 850px) {
+    .container-cadastro {
+        flex-direction: column;
+    }
+    .cadastro-branding, .cadastro-form-container {
+        width: 100%;
+        padding: 30px;
+    }
+}
+
+/* --- LOGIN SOCIAL --- */
+
+/* Divisor com a linha no meio (Ex: ---- ou ----) */
+.ou-divisor {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 25px 0;
+    color: var(--cinza-placeholder);
+}
+
+.ou-divisor::before,
+.ou-divisor::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--borda-clara);
+}
+
+.ou-divisor span {
+    padding: 0 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Área dos botões */
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+/* Estilo Base dos Botões Sociais */
+.btn-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.btn-social:hover {
+    opacity: 0.9;
+    transform: translateY(-2px); /* Dá um pequeno pulinho ao passar o mouse */
+}
+
+/* Botão Google (Branco com ícone colorido) */
+.btn-google {
+    background-color: var(--branco);
+    color: var(--texto-escuro);
+    border: 1px solid var(--borda-clara);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+.btn-google i {
+    color: #EA4335; /* Vermelho característico do Google */
+    font-size: 1.2rem;
+}
+
+/* Botão LinkedIn (Azul oficial) */
+.btn-linkedin {
+    background-color: #0077b5;
+    color: var(--branco);
+    border: none;
+}
+
+.btn-linkedin i {
+    font-size: 1.2rem;
+}
+
+/* ==============================================================
+   ESTILOS EXTRAS DA TELA DE CADASTRO (SENHA, LGPD E TOAST)
+============================================================== */
+
+/* --- Container da Senha com Ícone de Olho --- */
+.senha-container { 
+    position: relative; 
+}
+
+.senha-container input { 
+    width: 100%; 
+    padding-right: 40px; /* Abre espaço para o ícone não encavalar no texto */
+    box-sizing: border-box; 
+}
+
+.toggle-senha { 
+    position: absolute; 
+    right: 15px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    cursor: pointer; 
+    color: var(--texto-secundario); 
+    transition: color 0.2s; 
+}
+
+.toggle-senha:hover { 
+    color: var(--azul-principal); 
+}
+
+/* --- Checkbox LGPD --- */
+.checkbox-lgpd { 
+    display: flex; 
+    gap: 10px; 
+    align-items: flex-start; 
+    margin: 20px 0; 
+}
+
+.checkbox-lgpd input { 
+    margin-top: 4px; 
+    cursor: pointer; 
+}
+
+.checkbox-lgpd label { 
+    font-size: 0.85rem; 
+    color: var(--texto-secundario); 
+    line-height: 1.4; 
+    cursor: pointer; 
+}
+
+.checkbox-lgpd a { 
+    color: var(--azul-principal); 
+    font-weight: bold; 
+    text-decoration: none; 
+}
+
+/* --- TOAST NOTIFICATIONS (Alertas flutuantes) --- */
+#toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.toast {
+    min-width: 250px;
+    max-width: 350px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    color: var(--branco);
+    font-size: 0.95rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideInRight 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+/* Cores das notificações */
+.toast.sucesso { background-color: #10b981; border-left: 5px solid #047857; }
+.toast.erro { background-color: #ef4444; border-left: 5px solid #b91c1c; }
+.toast.aviso { background-color: #f59e0b; border-left: 5px solid #b45309; }
+
+/* Animação para esconder o Toast */
+.toast.sumindo {
+    animation: fadeOutRight 0.4s ease forwards;
+}
+
+@keyframes slideInRight {
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeOutRight {
+    to { opacity: 0; transform: translateX(100%); }
+}
