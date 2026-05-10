@@ -796,7 +796,7 @@ textarea {
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    color: var(--azul-fundo-site);
+    color: var(--azul-fundo-site); 
     padding: 15px 20px; 
     width: 100%;
     box-sizing: border-box; 
