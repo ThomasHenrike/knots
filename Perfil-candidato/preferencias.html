@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knots - Perfil</title>
+    <link rel="stylesheet" href="../estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="../imgs/logoicon1.ico">
+</head>
+<body>
+    <nav>
+        <div class="container-nav">
+            <a href="../index.html"><img src="../imgs/knots_logo1.svg" width="100"></a>
+            <div class="search-container">
+                <input type="text" placeholder="Buscar vagas" class="search-input">
+                <a href="../busca.html"><i class="fa-solid fa-magnifying-glass search-icon"></i></a>
+            </div>
+            <a href="../postar-vaga.html">Anunciar</a>
+            <span>|</span>
+            <a href="#">Login</a>
+            <a href="perfil-candidato.html"><img src="../imgs/icone-perfil.svg" width="50"></a>
+        </div>
+    </nav>
+
+    <main id="perfil-candidato">
+        <div class="container-nav-lateral">
+            <h2>Navegação</h2>
+            <ul>
+                <li><a href="perfil-candidato.html"><i class="fa-solid fa-circle-user"></i>Meu Perfil</a></li>
+                <li><a href="dados-pessoais.html"><i class="fa-solid fa-id-card"></i>Dados Pessoais</a></li>
+                <li><a href="minhas-candidaturas.html"><i class="fa-solid fa-briefcase"></i>Minhas Candidaturas</a></li>
+                <li><a href="contas-vinculadas.html"><i class="fa-solid fa-users"></i>Contas Vinculadas</a></li>
+                <li><a href="notificacoes.html"><i class="fa-solid fa-bell"></i>Notificações<i class="fa-solid fa-circle-exclamation" style="color: var(--branco); font-size: 0.7rem; vertical-align: middle;"></i></a></li>
+                <li><a href="preferencias.html"><i class="fa-solid fa-gears"></i>Preferências</a></li>
+                <li><a href="../index.html"><i class="fa-solid fa-sign-out-alt"></i>Sair</a></li>
+
+            </ul>
+        </div>
+        <div class="container-conteudo-perfil">
+            <div class="header-preferencias">
+                <h1>Preferências da Conta</h1>
+                <button class="btn-submit" style="width: auto; margin-top: 0;">Salvar Alterações</button>
+            </div>
+            <div class="grid-preferencias">
+                <div class="coluna-preferencias">
+                    
+                    <div class="secao-preferencias">
+                        <h3><i class="fa-solid fa-shield-halved"></i> Segurança e Acesso</h3>
+                        <div class="form-group">
+                            <label class="label-postar-vaga">E-mail de Login</label>
+                            <input type="email" value="rh@techsolutions.com" class="input-titulo" disabled>
+                            <span style="font-size: 0.8rem; color: var(--texto-secundario);">Para mudar o e-mail, contate o suporte.</span>
+                        </div>
+                        <div class="form-group">
+                            <label class="label-postar-vaga">Nova Senha</label>
+                            <input type="password" placeholder="Digite a nova senha" class="input-titulo">
+                        </div>
+                        <div class="form-group">
+                            <label class="label-postar-vaga">Confirmar Nova Senha</label>
+                            <input type="password" placeholder="Repita a nova senha" class="input-titulo">
+                        </div>
+                    </div>
+                    
+                    <div class="secao-preferencias">
+                        <h3><i class="fa-solid fa-bell"></i> Alertas e Notificações</h3>
+                        
+                        <div class="item-toggle">
+                            <div>
+                                <strong>Alerta de Vagas</strong>
+                                <p>Receber e-mail quando uma nova vaga for publicada</p>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider redonda"></span>
+                            </label>
+                        </div>
+
+                        <div class="item-toggle">
+                            <div>
+                                <strong>Alerta de atualizações</strong>
+                                <p>Receber uma notificação quando houver atualizações</p>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider redonda"></span>
+                            </label>
+                        </div>
+
+                        <div class="item-toggle">
+                            <div>
+                                <strong>Mensagens do sistema</strong>
+                                <p>Receber notificações sobre atualizações do sistema</p>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider redonda"></span>
+                            </label>
+                        </div>
+
+                        <div class="item-toggle">
+                            <div>
+                                <strong>Perfil Público</strong>
+                                <p>Permitir que outros usuários visualizem seu perfil</p>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider redonda"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <span>Desenvolvido por grupo Knots, 2026</span>
+    </footer>
+    <script src="drag-drop.js"></script>
+</body>
+</html>       
