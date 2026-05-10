@@ -1752,3 +1752,126 @@ input:checked + .slider:before {
         grid-template-columns: 1fr; /* Muda para uma coluna só no celular */
     }
 }
+
+/* Estilização Extra para Dados Pessoais */
+.container-conteudo-pessoal {
+    flex-grow: 1;
+    padding: 40px;
+    max-width: 900px;
+}
+
+.perfil-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.btn-editar-geral {
+    background-color: var(--azul-principal);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-editar-geral:hover {
+    background-color: var(--azul-escuro-hover);
+}
+
+.dados-pessoais-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.card-topo {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.foto-container {
+    position: relative;
+}
+
+.btn-edit-foto {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: var(--azul-principal);
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.divisor-perfil {
+    border: 0;
+    height: 1px;
+    background: #e2e8f0;
+    margin: 20px 0;
+}
+
+.grid-dados {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.dado-item {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #edf2f7;
+}
+
+.dado-item.full-width {
+    grid-column: span 2;
+}
+
+.dado-texto strong {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--azul-principal);
+    margin-bottom: 4px;
+}
+
+.dado-texto span {
+    color: var(--texto-escuro);
+    font-weight: 500;
+}
+
+.btn-edit-inline {
+    background: none;
+    border: none;
+    color: #cbd5e1;
+    cursor: pointer;
+    padding: 5px;
+    transition: 0.2s;
+}
+
+.btn-edit-inline:hover {
+    color: var(--azul-principal);
+    transform: scale(1.1);
+}
+
+/* Responsividade para o Grid */
+@media (max-width: 600px) {
+    .grid-dados {
+        grid-template-columns: 1fr;
+    }
+    .dado-item.full-width {
+        grid-column: span 1;
+    }
+}
