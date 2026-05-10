@@ -4,6 +4,7 @@
     --azul-escuro-hover: #18284a;
     --azul-fundo-site: #ebf9ff;
     --azul-card: #acd6f6;
+    --azul-leve-hover: #4587b3;
     
     /* Cores de Texto e Elementos */
     --texto-escuro: #070810;
@@ -776,30 +777,40 @@ textarea {
     height: 100vh;
 
     position: sticky;
-    top: 120px;
+    top: 115px;
     align-self: flex-start;
     
     /* Garante que não haja margens empurrando o elemento */
     margin: 0; 
 }
-.container-nav-lateral li{
+
+.container-nav-lateral li {
     list-style: none;
-    text-decoration: none;
     font-weight: bold;
-    padding: 10%;
-    padding-left: 0;
+    padding: 10px;
 }
-.container-nav-lateral li a{
+
+
+.container-nav-lateral li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     text-decoration: none;
     color: var(--azul-fundo-site);
+    padding: 15px 20px; 
+    width: 100%;
+    box-sizing: border-box; 
 }
+
 .container-nav-lateral li a i{
     text-decoration: none;
     color: red;
 }
-.container-nav-lateral li:hover{
-    background-color: #4587b3;
+
+.container-nav-lateral li:hover {
+    background-color: var(--azul-leve-hover);
 }
+
 .container-nav-lateral h2{
     text-transform: uppercase;
     margin-bottom: 10px;
@@ -1353,9 +1364,391 @@ textarea {
     .perfil-acoes-footer {
         flex-direction: column;
         align-items: stretch;
-    }
+    }}
     
     .btn-perfil {
         justify-content: center;
+    }
+/* --- TELA NOTIFICAÇÕES --- */
+
+.header-notificacoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--borda-clara);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.lista-notificacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-notificacao {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: var(--branco);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border: 1px solid var(--borda-clara);
+    transition: background-color 0.3s;
+}
+
+/* Indicador visual de não lida (borda azul grossa na esquerda) */
+.card-notificacao.nao-lida {
+    border-left: 5px solid var(--azul-principal);
+    background-color: #f4faff; /* Fundo levemente azulado */
+}
+
+/* Estilo para quando já foi lida */
+.card-notificacao.lida {
+    border-left: 5px solid transparent;
+    opacity: 0.8; 
+}
+
+/* Ícones das notificações */
+.icone-notificacao {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.icone-sucesso {
+    background-color: #d1fae5;
+    color: #10b981; 
+}
+
+.icone-sistema {
+    background-color: #dbeafe;
+    color: var(--azul-principal); 
+}
+
+.icone-alerta {
+    background-color: #fef3c7;
+    color: #f59e0b; /* Amarelo/Laranja */
+}
+
+/* Textos da notificação */
+.conteudo-notificacao {
+    flex-grow: 1;
+}
+
+.conteudo-notificacao h4 {
+    color: var(--texto-escuro);
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.conteudo-notificacao p {
+    color: var(--texto-secundario);
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.tempo-notificacao {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    font-weight: bold;
+}
+
+/* Botão dentro da notificação (se houver) */
+.acao-notificacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+/* --- TELA DE RELATÓRIOS --- */
+
+.header-relatorios {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--borda-clara);
+    padding-bottom:15px;
+    margin-bottom: 30px;
+}
+
+.filtro-periodo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Grid de Métricas do Topo */
+.grid-metricas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.card-metrica {
+    background-color: var(--branco);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--borda-clara);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.metrica-icone {
+    width: 60px;
+    height: 60px;
+    background-color: #e0f2fe;
+    color: var(--azul-principal);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.metrica-info p {
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.metrica-info h3 {
+    color: var(--texto-escuro);
+    font-size: 1.8rem;
+}
+
+/* Seções Gerais do Relatório */
+.secao-relatorio {
+    background-color: var(--branco);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--borda-clara);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    margin-bottom: 30px;
+}
+
+.secao-relatorio h3 {
+    color: var(--azul-principal);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed var(--borda-clara);
+}
+
+/* Gráfico de Barras em CSS */
+.grafico-barras {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.barra-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.label-barra {
+    width: 200px;
+    font-weight: bold;
+    color: var(--texto-escuro);
+    font-size: 0.9rem;
+}
+
+.trilho-barra {
+    flex-grow: 1;
+    height: 12px;
+    background-color: #f1f5f9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.preenchimento-barra {
+    height: 100%;
+    background-color: var(--azul-principal);
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+.valor-barra {
+    width: 50px;
+    text-align: right;
+    font-weight: bold;
+    color: var(--texto-secundario);
+}
+
+/* Tabela de Dados */
+.tabela-relatorios {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.tabela-relatorios th {
+    background-color: #f8fbfc;
+    color: var(--texto-secundario);
+    padding: 12px 15px;
+    font-size: 0.9rem;
+    border-bottom: 2px solid var(--borda-clara);
+}
+
+.tabela-relatorios td {
+    padding: 15px;
+    border-bottom: 1px solid #f1f5f9;
+    color: var(--texto-escuro);
+    font-size: 0.95rem;
+}
+
+.tabela-relatorios tbody tr:hover {
+    background-color: #f8fbfc;
+}
+
+/* --- TELA DE PREFERÊNCIAS --- */
+
+.header-preferencias {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--borda-clara);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.grid-preferencias {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    gap: 30px;
+}
+
+.secao-preferencias {
+    background-color: var(--branco);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--borda-clara);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    margin-bottom: 30px;
+}
+
+.secao-preferencias h3 {
+    color: var(--azul-principal);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed var(--borda-clara);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Integrações */
+.item-integracao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f8fbfc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.info-integracao {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.info-integracao p {
+    color: var(--texto-secundario);
+    font-size: 0.85rem;
+}
+
+/* O BOTÃO INTERRUPTOR (TOGGLE SWITCH) EM CSS PURO */
+.item-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.item-toggle:last-child {
+    border-bottom: none;
+}
+
+.item-toggle p {
+    color: var(--texto-secundario);
+    font-size: 0.85rem;
+    margin-top: 3px;
+}
+
+/* Esconde o checkbox padrão do HTML */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Desenha o fundo do botão */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #cbd5e1;
+    transition: .4s;
+}
+
+/* Desenha a "bolinha" do botão */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+/* Quando o checkbox invisível estiver marcado (checked), muda a cor do fundo */
+input:checked + .slider {
+    background-color: var(--azul-principal);
+}
+
+/* Quando marcado, empurra a bolinha para a direita */
+input:checked + .slider:before {
+    transform: translateX(22px);
+}
+
+/* Deixa o botão arredondado */
+.slider.redonda {
+    border-radius: 34px;
+}
+
+.slider.redonda:before {
+    border-radius: 50%;
+}
+
+/* Ajuste de responsividade para telas menores */
+@media (max-width: 900px) {
+    .grid-preferencias {
+        grid-template-columns: 1fr; /* Muda para uma coluna só no celular */
     }
 }
