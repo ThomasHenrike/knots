@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knots - Perfil</title>
+    <link rel="stylesheet" href="../estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="../imgs/logoicon1.ico">
+</head>
+<body>
+    <nav>
+        <div class="container-nav">
+            <a href="../index.html"><img src="../imgs/knots_logo1.svg" width="100"></a>
+            <div class="search-container">
+                <input type="text" placeholder="Buscar vagas" class="search-input">
+                <a href="../busca.html"><i class="fa-solid fa-magnifying-glass search-icon"></i></a>
+            </div>
+            <a href="../postar-vaga.html">Anunciar</a>
+            <span>|</span>
+            <a href="#">Login</a>
+            <a href="../perfil-candidato.html"><img src="../imgs/icone-perfil.svg" width="50"></a>
+        </div>
+    </nav>
+    <main id="perfil-candidato">
+        <div class="container-nav-lateral">
+            <h2>Navegação</h2>
+            <ul>
+                <li><a href="perfil-empresa.html"><i class="fa-solid fa-building"></i> Perfil da Empresa</a></li>
+                <li><a href="minhas-vagas.html"><i class="fa-solid fa-list-check"></i> Minhas Vagas</a></li>
+                <li><a href="processos-seletivos.html"><i class="fa-solid fa-users-gear"></i> Processos Seletivos</a></li>
+                <li><a href="notificacoes.html"><i class="fa-solid fa-bell"></i> Notificações <i class="fa-solid fa-circle-exclamation" style="color: var(--branco); font-size: 0.7rem; vertical-align: middle;"></i></a></li>
+                <li><a href="relatorios.html"><i class="fa-solid fa-chart-line"></i> Relatórios</a></li>
+                <li><a href="preferencias.html"><i class="fa-solid fa-gears"></i> Preferências</a></li>
+                <li><a href="../index.html"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></li>
+            </ul>
+        </div>
+        <div class="container-conteudo-perfil">
+            <div class="header-relatorios">
+                <div>
+                    <h1>Relatórios e Desempenho</h1>
+                    <p style="color: var(--texto-secundario);">Visão geral do seu recrutamento no Knots.</p>
+                </div>
+                <div class="filtro-periodo">
+                    <select class="input-titulo" style="width: auto;">
+                        <option value="30">Últimos 30 dias</option>
+                        <option value="90">Últimos 90 dias</option>
+                        <option value="ano">Este Ano</option>
+                    </select>
+                    <button class="btn-acao btn-ver"><i class="fa-solid fa-download"></i> Exportar PDF</button>
+                </div>
+            </div>
+            <div class="grid-metricas">
+                <div class="card-metrica">
+                    <div class="metrica-icone"><i class="fa-solid fa-briefcase"></i></div>
+                    <div class="metrica-info">
+                        <p>Vagas Publicadas</p>
+                        <h3>24</h3>
+                    </div>
+                </div>
+                <div class="card-metrica">
+                    <div class="metrica-icone"><i class="fa-solid fa-users-viewfinder"></i></div>
+                    <div class="metrica-info">
+                        <p>Total de Candidatos</p>
+                        <h3>847</h3>
+                    </div>
+                </div>
+                <div class="card-metrica">
+                    <div class="metrica-icone" style="background-color: #d1fae5; color: #10b981;"><i class="fa-solid fa-handshake"></i></div>
+                    <div class="metrica-info">
+                        <p>Contratações</p>
+                        <h3>18</h3>
+                    </div>
+                </div>
+                <div class="card-metrica">
+                    <div class="metrica-icone" style="background-color: #fef3c7; color: #f59e0b;"><i class="fa-solid fa-clock"></i></div>
+                    <div class="metrica-info">
+                        <p>Tempo Médio (Fechamento)</p>
+                        <h3>12 dias</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="secao-relatorio">
+                <h3>Origem dos Candidatos</h3>
+                <div class="grafico-barras">
+                    <div class="barra-item">
+                        <span class="label-barra">Portal Knots</span>
+                        <div class="trilho-barra"><div class="preenchimento-barra" style="width: 75%;"></div></div>
+                        <span class="valor-barra">75%</span>
+                    </div>
+                    <div class="barra-item">
+                        <span class="label-barra">Importado do LinkedIn</span>
+                        <div class="trilho-barra"><div class="preenchimento-barra" style="width: 15%; background-color: #0077b5;"></div></div>
+                        <span class="valor-barra">15%</span>
+                    </div>
+                    <div class="barra-item">
+                        <span class="label-barra">Importado do Infojobs</span>
+                        <div class="trilho-barra"><div class="preenchimento-barra" style="width: 10%; background-color: #ff4b12;"></div></div>
+                        <span class="valor-barra">10%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="secao-relatorio">
+                <h3>Desempenho por Vaga</h3>
+                <table class="tabela-relatorios">
+                    <thead>
+                        <tr>
+                            <th>Título da Vaga</th>
+                            <th>Status</th>
+                            <th>Visualizações</th>
+                            <th>Candidatos</th>
+                            <th>Taxa de Conversão</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Desenvolvedor Front-end Júnior</td>
+                            <td><span class="badge-status ativa">Ativa</span></td>
+                            <td>340</td>
+                            <td>45</td>
+                            <td>13.2%</td>
+                        </tr>
+                        <tr>
+                            <td>Estágio em Redes</td>
+                            <td><span class="badge-status ativa">Ativa</span></td>
+                            <td>120</td>
+                            <td>12</td>
+                            <td>10.0%</td>
+                        </tr>
+                        <tr>
+                            <td>Analista de Suporte Técnico</td>
+                            <td><span class="badge-status encerrada">Encerrada</span></td>
+                            <td>890</td>
+                            <td>87</td>
+                            <td>9.7%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <span>Desenvolvido por grupo Knots, 2026</span>
+    </footer>
+    <script src="drag-drop.js"></script>
+</body>
+</html>

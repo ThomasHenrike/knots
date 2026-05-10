@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knots - Perfil</title>
+    <link rel="stylesheet" href="../estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="../imgs/logoicon1.ico">
+</head>
+<body>
+    <nav>
+        <div class="container-nav">
+            <a href="../index.html"><img src="../imgs/knots_logo1.svg" width="100"></a>
+            <div class="search-container">
+                <input type="text" placeholder="Buscar vagas" class="search-input">
+                <a href="../busca.html"><i class="fa-solid fa-magnifying-glass search-icon"></i></a>
+            </div>
+            <a href="../postar-vaga.html">Anunciar</a>
+            <span>|</span>
+            <a href="#">Login</a>
+            <a href="../perfil-candidato.html"><img src="../imgs/icone-perfil.svg" width="50"></a>
+        </div>
+    </nav>
+
+    <main id="perfil-candidato">
+        <div class="container-nav-lateral">
+            <h2>Navegação</h2>
+            <ul>
+                <li><a href="perfil-empresa.html"><i class="fa-solid fa-building"></i> Perfil da Empresa</a></li>
+                <li><a href="minhas-vagas.html"><i class="fa-solid fa-list-check"></i> Minhas Vagas</a></li>
+                <li><a href="processos-seletivos.html"><i class="fa-solid fa-users-gear"></i> Processos Seletivos</a></li>
+                <li><a href="notificacoes.html"><i class="fa-solid fa-bell"></i> Notificações <i class="fa-solid fa-circle-exclamation" style="color: var(--branco); font-size: 0.7rem; vertical-align: middle;"></i></a></li>
+                <li><a href="relatorios.html"><i class="fa-solid fa-chart-line"></i> Relatórios</a></li>
+                <li><a href="preferencias.html"><i class="fa-solid fa-gears"></i> Preferências</a></li>
+                <li><a href="../index.html"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></li>
+            </ul>
+        </div>
+        <div class="container-conteudo-perfil">
+            <div class="header-notificacoes">
+                <h1>Notificações</h1>
+                <button class="btn-acao btn-editar">Marcar todas como lidas</button>
+            </div>
+
+            <div class="lista-notificacoes">
+                
+                <div class="card-notificacao nao-lida">
+                    <div class="icone-notificacao icone-sucesso">
+                        <i class="fa-solid fa-user-plus"></i>
+                    </div>
+                    <div class="conteudo-notificacao">
+                        <h4>Novo candidato na vaga "Desenvolvedor Front-end Júnior"</h4>
+                        <p><strong>Weslley Santos</strong> acabou de enviar o currículo. Verifique o perfil no seu funil de processos.</p>
+                        <span class="tempo-notificacao">Há 5 minutos</span>
+                    </div>
+                    <div class="acao-notificacao">
+                        <a href="processos-seletivos.html" class="btn-acao btn-ver">Ver Processo</a>
+                    </div>
+                </div>
+
+                <div class="card-notificacao nao-lida">
+                    <div class="icone-notificacao icone-sistema">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <div class="conteudo-notificacao">
+                        <h4>Sua vaga foi publicada com sucesso!</h4>
+                        <p>A vaga "Estágio em Redes" já está visível para milhares de estudantes no Knots e no LinkedIn.</p>
+                        <span class="tempo-notificacao">Há 2 horas</span>
+                    </div>
+                </div>
+
+                <div class="card-notificacao lida">
+                    <div class="icone-notificacao icone-alerta">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <div class="conteudo-notificacao">
+                        <h4>Assinatura Premium próxima do vencimento</h4>
+                        <p>Seu plano Knots Premium vence em 3 dias. Renove agora para manter suas vagas no topo das buscas.</p>
+                        <span class="tempo-notificacao">Ontem</span>
+                    </div>
+                    <div class="acao-notificacao">
+                        <a href="compra.html" class="btn-acao btn-editar">Renovar</a>
+                    </div>
+                </div>
+
+                <div class="card-notificacao lida">
+                    <div class="icone-notificacao icone-sucesso">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
+                    <div class="conteudo-notificacao">
+                        <h4>Entrevista confirmada</h4>
+                        <p>A candidata Ana Souza confirmou presença na entrevista de amanhã às 14h.</p>
+                        <span class="tempo-notificacao">Há 2 dias</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <span>Desenvolvido por grupo Knots, 2026</span>
+    </footer>
+    <script src="drag-drop.js"></script>
+</body>
+</html>
