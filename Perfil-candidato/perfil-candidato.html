@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knots - Perfil</title>
+    <link rel="stylesheet" href="../estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="../imgs/logoicon1.ico">
+</head>
+<body>
+    <nav>
+        <div class="container-nav">
+            <a href="../index.html"><img src="../imgs/knots_logo1.svg" width="100"></a>
+            <div class="search-container">
+                <input type="text" placeholder="Buscar vagas" class="search-input">
+                <a href="../busca.html"><i class="fa-solid fa-magnifying-glass search-icon"></i></a>
+            </div>
+            <a href="../postar-vaga.html">Anunciar</a>
+            <span>|</span>
+            <a href="#">Login</a>
+            <a href="../perfil-candidato.html"><img src="../imgs/icone-perfil.svg" width="50"></a>
+        </div>
+    </nav>
+
+    <main id="perfil-candidato">
+        <div class="container-nav-lateral">
+            <h2>Navegação</h2>
+            <ul>
+                <li><a href="../perfil-candidato.html"><i class="fa-solid fa-circle-user"></i>Meu Perfil</a></li>
+                <li><a href="#"><i class="fa-solid fa-id-card"></i>Dados Pessoais</a></li>
+                <li><a href="#"><i class="fa-solid fa-briefcase"></i>Minhas Candidaturas</a></li>
+                <li><a href="#"><i class="fa-solid fa-users"></i>Contas Vinculadas</a></li>
+                <li><a href="#"><i class="fa-solid fa-bell"></i>Notificações<i class="fa-solid fa-circle-exclamation" style="color: var(--branco); font-size: 0.7rem; vertical-align: middle;"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-gear"></i>Preferências</a></li>
+                <li><a href="../index.html"><i class="fa-solid fa-sign-out-alt"></i>Sair</a></li>
+
+            </ul>
+        </div>
+        <div class="container-conteudo-perfil">
+            <div class="perfil-card-header">
+                <div class="header-flex">
+                    <img class="foto-perfil" src="../imgs/bope.png" alt="Foto de Weslley Santos">
+                    <div class="info-usuario">
+                        <h2>Weslley Santos <a href="#" target="_blank"><i class="fa-brands fa-linkedin" style="color: #0072B1;" title="Acessar LinkedIn"></i></a></h2>
+                        <p class="tagline">Desenvolvedor de Software em formação na FATEC</p>
+                        
+                        <div class="contato-rapido">
+                            <span><i class="fa-solid fa-envelope"></i> weslleysantos@gmail.com</span>
+                            <span>|</span>
+                            <span><i class="fa-solid fa-phone"></i> 4002-8922</span>
+                            <span>|</span>
+                            <span><i class="fa-solid fa-location-dot"></i> Itapira, SP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="perfil-secao">
+                <h1><i class="fa-solid fa-bullseye"></i> Objetivos</h1>
+                <p>Atuar como desenvolvedor full-stack, contribuindo para projetos inovadores e aprendendo com profissionais experientes.</p>
+            </section>
+
+            <div class="perfil-grid-info">
+                <section class="perfil-secao">
+                    <h1><i class="fa-solid fa-graduation-cap"></i> Formação</h1>
+                    <div class="item-cronograma">
+                        <strong>FATEC Ogari de Castro Pacheco</strong>
+                        <p>Desenvolvimento de Software Multiplataforma</p>
+                        <span class="periodo">2024 - Presente</span>
+                    </div>
+                </section>
+
+                <section class="perfil-secao">
+                    <h1><i class="fa-solid fa-briefcase"></i> Experiência</h1>
+                    <div class="item-cronograma">
+                        <strong>Empresa XYZ</strong>
+                        <p>Estágio em Desenvolvimento Web</p>
+                        <span class="periodo">2024 - 2025</span>
+                    </div>
+                </section>
+            </div>
+
+            <section class="perfil-secao">
+                <h1><i class="fa-solid fa-code"></i> Habilidades</h1>
+                <div class="habilidades-badges">
+                    <span>JavaScript</span>
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>SQL</span>
+                    <span>Git</span>
+                    <span>HTML5 & CSS3</span>
+                </div>
+            </section>
+
+            <div class="perfil-acoes-footer">
+                <button class="btn-perfil btn-editar-perfil">
+                    <i class="fa-solid fa-pen-to-square"></i> Editar Perfil
+                </button>
+                <button class="btn-perfil btn-importar-linkedin">
+                    <i class="fa-brands fa-linkedin"></i> Importar do LinkedIn
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <span>Desenvolvido por grupo Knots, 2026</span>
+    </footer>
+</body>
+</html>

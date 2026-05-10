@@ -1191,3 +1191,171 @@ textarea {
 .btn-ver-perfil:hover {
     background-color: var(--azul-fundo-site);
 }
+
+/* Melhorias no Conteúdo do Perfil */
+.perfil-card-header {
+    background-color: var(--branco);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.header-flex {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: var(--texto-secundario) !important;
+    margin: 5px 0 15px 0;
+}
+
+.contato-rapido {
+    display: flex;
+    gap: 15px;
+    font-size: 0.9rem;
+    color: var(--texto-secundario);
+}
+
+.contato-rapido i {
+    color: var(--azul-principal);
+    margin-right: 5px;
+}
+
+.perfil-secao {
+    margin-bottom: 40px;
+}
+
+.perfil-secao h1 {
+    font-size: 1.5rem;
+    color: var(--azul-escuro-hover);
+    border-bottom: 3px solid var(--azul-principal);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.perfil-secao h1 i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+/* Grid de Informações */
+.perfil-grid-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.item-cronograma {
+    background: var(--branco);
+    padding: 15px;
+    border-left: 4px solid var(--azul-principal);
+    border-radius: 4px;
+}
+
+.periodo {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--azul-principal);
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Badges de Habilidades */
+.habilidades-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.habilidades-badges span {
+    background-color: var(--azul-principal);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.habilidades-badges span:hover {
+    background-color: var(--azul-escuro-hover);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .perfil-grid-info {
+        grid-template-columns: 1fr;
+    }
+    .header-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contato-rapido {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* Container dos Botões de Ação no Rodapé */
+.perfil-acoes-footer {
+    display: flex;
+    justify-content: flex-end; /* Alinha os botões à direita */
+    gap: 15px;
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid #d1e9f7; /* Linha sutil para separar o conteúdo das ações */
+}
+
+/* Estilo Base dos Botões */
+.btn-perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+/* Botão Editar Perfil (Estilo mais neutro/tema) */
+.btn-editar-perfil {
+    background-color: var(--azul-principal);
+    color: white;
+}
+
+.btn-editar-perfil:hover {
+    background-color: var(--azul-escuro-hover);
+    transform: translateY(-2px);
+}
+
+/* Botão LinkedIn (Cor da marca LinkedIn) */
+.btn-importar-linkedin {
+    background-color: #0077b5;
+    color: white;
+}
+
+.btn-importar-linkedin:hover {
+    background-color: #004182;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 119, 181, 0.3);
+}
+
+/* Ajuste para Mobile */
+@media (max-width: 600px) {
+    .perfil-acoes-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btn-perfil {
+        justify-content: center;
+    }
+}
