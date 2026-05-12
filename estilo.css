@@ -2404,3 +2404,43 @@ input:checked + .slider:before {
     background-color: #e11d48;
     color: white;
 }
+
+/* Novo CSS para formatação do status Aprovado */
+
+/* Classe container para alinhar os elementos verticalmente à direita */
+.status-finalizado-aprovado {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinha os textos à direita da coluna */
+    justify-content: center;
+    gap: 4px; /* Pequeno espaço entre 'Finalizado' e 'Aprovado' */
+}
+
+/* Estilo para o texto 'Finalizado' */
+.txt-finalizado {
+    font-size: 0.85rem;
+    color: var(--texto-secundario) !important; /* Cor cinza secundária */
+    margin: 0 !important;
+}
+
+/* Container horizontal para o ícone e o texto 'Aprovado' */
+.sub-status-aprovado {
+    display: flex;
+    align-items: center;
+    gap: 6px; /* Espaço entre o ícone e o texto */
+    color: #166534; /* Um verde escuro agradável e legível */
+}
+
+/* Estilo para o ícone de check verde */
+.sub-status-aprovado i {
+    font-size: 1.1rem;
+    color: inherit; /* Herda a cor verde do container pai */
+}
+
+/* Estilo para o texto 'Aprovado' em verde */
+.txt-aprovado {
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: inherit !important; /* Herda a cor verde e força */
+    margin: 0 !important;
+}
