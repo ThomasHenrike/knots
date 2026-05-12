@@ -2315,3 +2315,92 @@ input:checked + .slider:before {
 @keyframes fadeOutRight {
     to { opacity: 0; transform: translateX(100%); }
 }
+
+/*Parte de ver as candidaturas*/
+
+/* Container principal das candidaturas */
+.verminhascandidaturas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 20px;
+}
+
+/* O Card: Alinhamento horizontal de todos os itens */
+.candidaturasrealizadas {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    background-color: var(--branco);
+    padding: 15px 25px;
+    border-radius: 12px;
+    border: 1px solid var(--borda-clara);
+    transition: box-shadow 0.3s ease;
+}
+
+.candidaturasrealizadas:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Espaçamento do ícone de alerta */
+.iconecandidaturas {
+    margin-right: 20px;
+    color: #f59e0b; /* Cor de alerta/atenção */
+    font-size: 1.4rem;
+}
+
+/* Faz o texto ocupar o espaço central e empurrar os botões */
+.conteudocandidaturasrealizadas {
+    flex-grow: 1;
+}
+
+.titulovagacandidata {
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0;
+    color: var(--texto-principal);
+}
+
+.espcvagacandidata {
+    font-size: 0.85rem;
+    color: var(--texto-secundario);
+    margin: 4px 0 0 0;
+}
+
+/* Alinhamento dos botões à direita */
+.comoestaminhavaga, 
+.desistirdavaga {
+    margin-left: 10px;
+}
+
+/* Estilização específica dos botões */
+.btn-ver {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Botão de Ver Andamento (Azul) */
+.comoestaminhavaga .btn-ver {
+    background-color: var(--azul-principal);
+    color: white;
+}
+
+.comoestaminhavaga .btn-ver:hover {
+    background-color: var(--azul-leve-hover);
+}
+
+/* Botão de Desistir (Borda Vermelha) */
+.desistirdavaga .btn-ver {
+    background-color: transparent;
+    color: #e11d48;
+    border: 1px solid #e11d48;
+}
+
+.desistirdavaga .btn-ver:hover {
+    background-color: #e11d48;
+    color: white;
+}
