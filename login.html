@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Knots Login</title>
 
-    <link rel="stylesheet" href="estilo.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 
     <!-- FONT AWESOME -->
     <link rel="stylesheet"
@@ -27,7 +29,7 @@
 
 <body>
 
-    <!-- NAVBAR DO PRIMEIRO CÓDIGO -->
+    <!-- NAVBAR -->
 
     <nav>
 
@@ -39,20 +41,27 @@
 
             <div class="search-container">
 
-                <input type="text" placeholder="Buscar vagas" class="search-input">
+                <input type="text"
+                    placeholder="Buscar vagas"
+                    class="search-input">
 
-                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <a href="busca.html"><i class="fa-solid fa-magnifying-glass search-icon"></i></a>
+
 
             </div>
 
-            <a href="#">Anunciar</a>
+            <a href="postar-vaga.html">
+                Anunciar
+            </a>
 
             <span>|</span>
 
-            <a href="#">Login</a>
+            <a href="login.html">
+                Login
+            </a>
 
             <a href="#">
-                <img src="imgs/icone-perfil.svg" width="45">
+                <img src="imgs/icone-perfil.svg" width="50">
             </a>
 
         </div>
@@ -61,11 +70,11 @@
 
     <!-- MAIN -->
 
-    <section class="container">
+    <main class="container">
 
-        <!-- LEFT -->
+        <!-- LEFT SIDE -->
 
-        <div class="left-side">
+        <section class="left-side">
 
             <h1>
                 Conectando talentos às
@@ -73,15 +82,19 @@
                 certas.
             </h1>
 
+            <!-- FEATURE -->
+
             <div class="feature">
 
-                <div class="feature-icon">
-                    🛡️
+                <div class="feature-icon escudo-icon">
+                    <img src="imgs/escudo.png" alt="Segurança" width="95">
                 </div>
 
                 <div>
 
-                    <h3>Ambiente seguro</h3>
+                    <h3>
+                        Ambiente seguro
+                    </h3>
 
                     <p>
                         Seus dados protegidos com criptografia e validações.
@@ -91,17 +104,21 @@
 
             </div>
 
+            <!-- FEATURE -->
+
             <div class="feature">
 
                 <div class="feature-icon empresa-icon">
 
-                    <img src="imgs/empresa.png" alt="Empresa" width="100">
+                    <img src="imgs/empresa.png" alt="Empresa" width="120">
 
                 </div>
 
                 <div>
 
-                    <h3>Para empresas</h3>
+                    <h3>
+                        Para empresas
+                    </h3>
 
                     <p>
                         Divulgue vagas, encontre talentos e gerencie candidatos.
@@ -111,17 +128,21 @@
 
             </div>
 
+            <!-- FEATURE -->
+
             <div class="feature">
 
                 <div class="feature-icon pessoa-icon">
 
-                    <img src="imgs/candidatos.png" alt="Candidatos" width="100">
+                    <img src="imgs/candidatos.png" alt="Candidatos">
 
                 </div>
 
                 <div>
 
-                    <h3>Para candidatos</h3>
+                    <h3>
+                        Para candidatos
+                    </h3>
 
                     <p>
                         Conecte seu LinkedIn e destaque seu perfil.
@@ -131,15 +152,19 @@
 
             </div>
 
+            <!-- FEATURE -->
+
             <div class="feature">
 
-                <div class="feature-icon">
-                    🎓
+                <div class="feature-icon estudo-icon">
+                    <img src="imgs/estudo.png" alt="Estudo" width="90">
                 </div>
 
                 <div>
 
-                    <h3>Estágios e instituições</h3>
+                    <h3>
+                        Estágios e instituições
+                    </h3>
 
                     <p>
                         Vincule sua instituição e curso para vagas de estágio.
@@ -149,15 +174,19 @@
 
             </div>
 
+            <!-- FEATURE -->
+
             <div class="feature">
 
-                <div class="feature-icon">
-                    🔒
+                <div class="feature-icon seguranca-icon">
+                    <img src="imgs/seguranca.png" alt="Segurança" width="95">
                 </div>
 
                 <div>
 
-                    <h3>Validação e segurança</h3>
+                    <h3>
+                        Validação e segurança
+                    </h3>
 
                     <p>
                         Contas verificadas para garantir autenticidade.
@@ -167,13 +196,13 @@
 
             </div>
 
-        </div>
+        </section>
 
         <!-- LOGIN AREA -->
 
-        <div class="cards">
+        <section class="cards">
 
-            <!-- EMPRESA -->
+            <!-- CARD EMPRESA -->
 
             <div class="card">
 
@@ -181,7 +210,8 @@
 
                     <div class="circle">
 
-                        <img src="imgs/empresa.png" alt="Perfil" width="100">
+                        <img src="imgs/empresa.png" width="120"
+                            alt="Empresa">
 
                     </div>
 
@@ -199,15 +229,23 @@
 
                 </div>
 
+                <!-- FORM -->
+
                 <form>
 
-                    <label>E-mail empresarial</label>
+                    <label>
+                        E-mail empresarial
+                    </label>
 
-                    <input type="email" placeholder="empresa@email.com">
+                    <input type="email"
+                        placeholder="empresa@email.com">
 
-                    <label>Senha</label>
+                    <label>
+                        Senha
+                    </label>
 
-                    <input type="password" placeholder="Sua senha">
+                    <input type="password"
+                        placeholder="Sua senha">
 
                     <div class="options">
 
@@ -221,26 +259,35 @@
                         <a href="#">
                             Esqueci minha senha
                         </a>
+                        <a href="cadastro.html">Criar conta</a>
 
                     </div>
 
                     <button class="login-btn">
-                        Entrar
+                        <a href="postar-vaga.html" title="Entrar" style="text-decoration:none; color:inherit;"> Entrar</a>     
                     </button>
 
                 </form>
+
+                <!-- DIVIDER -->
 
                 <div class="divider">
                     ou
                 </div>
 
-                <button class="social-btn">
+                <!-- SOCIAL BUTTONS -->
+
+                <button class="social-btn linkedin-btn">
+                    <img src="imgs/linkedin.png" class="social-icon" width="60" alt="LinkedIn">
                     Entrar com LinkedIn
                 </button>
 
-                <button class="social-btn">
+                <button class="social-btn microsoft-btn">
+                    <img src="imgs/microsoft.png" class="social-icon" width="60" alt="Microsoft">
                     Entrar com Microsoft
                 </button>
+
+                <!-- INFO -->
 
                 <div class="info-box">
 
@@ -249,15 +296,15 @@
                     </h4>
 
                     <p>
-                        A empresa deverá informar nome, CNPJ, e-mail,
-                        telefone, endereço e responsável.
+                        A empresa deverá informar nome, CNPJ,
+                        e-mail, telefone, endereço e responsável.
                     </p>
 
                 </div>
 
             </div>
 
-            <!-- CANDIDATO -->
+            <!-- CARD CANDIDATO -->
 
             <div class="card">
 
@@ -265,7 +312,8 @@
 
                     <div class="circle">
 
-                        <img src="imgs/perfil (2).png" alt="Perfil" width="75">
+                        <img src="imgs/perfil(2).png" width="100"
+                            alt="Perfil">
 
                     </div>
 
@@ -283,15 +331,23 @@
 
                 </div>
 
+                <!-- FORM -->
+
                 <form>
 
-                    <label>E-mail</label>
+                    <label>
+                        E-mail
+                    </label>
 
-                    <input type="email" placeholder="seu@email.com">
+                    <input type="email"
+                        placeholder="seu@email.com">
 
-                    <label>Senha</label>
+                    <label>
+                        Senha
+                    </label>
 
-                    <input type="password" placeholder="Sua senha">
+                    <input type="password"
+                        placeholder="Sua senha">
 
                     <div class="options">
 
@@ -305,30 +361,40 @@
                         <a href="#">
                             Esqueci minha senha
                         </a>
+                        <a href="cadastro.html">Criar conta</a>
 
                     </div>
 
                     <button class="login-btn">
-                        Entrar
+                        <a href="ver-vaga.html" title="Entrar" style="text-decoration:none; color:inherit;">Entrar</a>     
                     </button>
 
                 </form>
+
+                <!-- DIVIDER -->
 
                 <div class="divider">
                     ou
                 </div>
 
-                <button class="social-btn">
+                <!-- SOCIAL BUTTONS -->
+
+                <button class="social-btn google-btn">
+                    <img src="imgs/google.png" class="social-icon" width="60" alt="Google">
                     Entrar com Google
                 </button>
 
-                <button class="social-btn">
+                <button class="social-btn linkedin-btn">
+                    <img src="imgs/linkedin.png" class="social-icon" width="60" alt="LinkedIn">
                     Entrar com LinkedIn
                 </button>
 
-                <button class="social-btn">
+                <button class="social-btn microsoft-btn">
+                    <img src="imgs/microsoft.png" class="social-icon" width="60" alt="Microsoft">
                     Entrar com Microsoft
                 </button>
+
+                <!-- INFO -->
 
                 <div class="info-box">
 
@@ -351,9 +417,9 @@
 
             </div>
 
-        </div>
+        </section>
 
-    </section>
+    </main>
 
     <!-- FOOTER -->
 
