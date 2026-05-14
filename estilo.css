@@ -2444,3 +2444,46 @@ input:checked + .slider:before {
     color: inherit !important; /* Herda a cor verde e força */
     margin: 0 !important;
 }
+
+/*Tela de acompanhar candidatura*/
+.statusdaminhacandidatura {
+    margin-left: 30px;
+    background-color: #acd6f6;
+    margin-top: 20px;
+    padding: 30px;
+    border-color: #52a5de;
+    border-radius: 10px;
+    border: 2px solid var(--borda-clara);
+    transition :transform 0.3s ease ;
+}
+
+.statusdaminhacandidatura:hover{
+    transform:translateY(-10px);
+    cursor: pointer;
+}
+
+.statusdaminhavaga {
+    font-size: 1.5rem;
+}
+
+.cadeado {
+    color: #18284a;
+}
+
+.finalizado {
+    color:#18284a ;
+}
+
+.emandamento {
+    color: #18284a;
+}
+
+.statusdaminhacandidatura {
+    display: flex;
+    justify-content: space-between;
+}
+
+.titulodoprocesso {
+    margin-top: 20px;
+    margin-left: 20px;
+}
