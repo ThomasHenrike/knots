@@ -804,7 +804,7 @@ textarea {
 
 .container-nav-lateral li a i{
     text-decoration: none;
-    color: red;
+    color: var(--azul-escuro-hover);
 }
 
 .container-nav-lateral li:hover {
