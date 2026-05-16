@@ -2487,3 +2487,13 @@ input:checked + .slider:before {
     margin-top: 20px;
     margin-left: 20px;
 }
+
+/* Esconde todas as etapas por padrão */
+.form-step {
+    display: none;
+}
+
+/* Mostra apenas a etapa que tem a classe 'active' */
+.form-step.active {
+    display: block;
+}

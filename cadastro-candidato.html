@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knots - Cadastro de Candidato</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="imgs/logoicon1.ico">
+</head>
+<body class="body-cadastro">
+
+    <div id="toast-container"></div>
+
+    <div class="container-cadastro">
+        
+        <div class="cadastro-branding">
+            <a href="index.html">
+                <img src="imgs/knots_logo1.svg" width="150" alt="Logo Knots" style="filter: brightness(0) invert(1);">
+            </a>
+            <h2>Encontre as melhores oportunidades para a sua carreira.</h2>
+            <p>Junte-se a milhares de profissionais que estão a impulsionar as suas carreiras com o Knots. Registo rápido e gratuito.</p>
+        </div>
+
+        <div class="cadastro-form-container">
+            
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="barra-progresso" style="width: 50%;"></div>
+            </div>
+
+            <form id="form-cadastro-candidato">
+                
+                <div class="form-step active" id="etapa1">
+                    <h3>Os Seus Dados</h3>
+                    <p style="color: var(--texto-secundario); margin-bottom: 20px;">Comece por preencher as suas informações básicas.</p>
+                    
+                    <div class="form-group">
+                        <label class="label-postar-vaga">Nome Completo</label>
+                        <input type="text" name="Nome" id="nome" placeholder="Digite o seu nome completo" class="input-titulo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="label-postar-vaga">CPF</label>
+                        <input type="text" name="CPF" id="cpf" placeholder="000.000.000-00" class="input-titulo" maxlength="14" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="label-postar-vaga">Área de Atuação Principal</label>
+                        <select name="Area_Atuacao" class="input-titulo" required>
+                            <option value="">Selecione a sua área...</option>
+                            <option value="Tecnologia da Informação">Tecnologia da Informação</option>
+                            <option value="Recursos Humanos">Recursos Humanos</option>
+                            <option value="Comércio e Varejo">Comércio e Varejo</option>
+                            <option value="Indústria e Manufatura">Indústria e Manufatura</option>
+                            <option value="Administração e Finanças">Administração e Finanças</option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="btn-submit btn-proximo" id="btn-proximo">
+                        Próximo Passo <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="form-step" id="etapa2">
+                    <h3>Crie o seu Acesso</h3>
+                    <p style="color: var(--texto-secundario); margin-bottom: 20px;">Como acederá ao seu painel de candidato.</p>
+                    
+                    <div class="form-group">
+                        <label class="label-postar-vaga">E-mail Pessoal</label>
+                        <input type="email" name="Email" placeholder="seu.email@exemplo.com" class="input-titulo" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="label-postar-vaga">Senha</label>
+                        <div class="senha-container">
+                            <input type="password" name="Senha" id="senha" placeholder="Mínimo 6 caracteres" class="input-titulo" required>
+                            <i class="fa-solid fa-eye toggle-senha"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="label-postar-vaga">Confirmar Senha</label>
+                        <div class="senha-container">
+                            <input type="password" id="confirmar_senha" placeholder="Repita a senha" class="input-titulo" required>
+                            <i class="fa-solid fa-eye toggle-senha"></i>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-lgpd">
+                        <input type="checkbox" id="termos_lgpd" required>
+                        <label for="termos_lgpd">
+                            Li e aceito os <a href="#">Termos de Uso</a> e concordo com o tratamento dos dados (LGPD).
+                        </label>
+                    </div>
+                    
+                    <div class="botoes-step">
+                        <button type="button" class="btn-acao btn-editar btn-voltar">
+                            <i class="fa-solid fa-arrow-left"></i> Voltar
+                        </button>
+                        <button type="submit" class="btn-submit btn-finalizar" id="btn-finalizar">
+                            Criar Conta
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+
+            <div class="ou-divisor">
+                <span>ou</span>
+            </div>
+
+            <div class="social-login">
+                <button type="button" class="btn-social btn-google">
+                    <i class="fa-brands fa-google"></i> Continuar com Google
+                </button>
+                <button type="button" class="btn-social btn-linkedin">
+                    <i class="fa-brands fa-linkedin-in"></i> Continuar com LinkedIn
+                </button>
+            </div>
+
+            <p class="login-link">Já tem uma conta? <a href="login.html">Faça Login aqui</a></p>
+        </div>
+    </div>
+
+    <script src="cadastro-candidato.js"></script>
+</body>
+</html>
